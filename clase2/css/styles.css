@@ -1,0 +1,11 @@
+/* CSS Global */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Undades de medidas: px - % - em - rem  - vh - vw */
+/* 1rem = 16px  */
+img{
+    width: 100%; 
+}
