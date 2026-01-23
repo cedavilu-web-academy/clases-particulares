@@ -1,5 +1,5 @@
 /* CSS Global */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,85 +8,123 @@
 /* Unidades de medidas: px - % - em - rem - vh - vw */
 /* 1rem = 16px */
 
-img{
-    width: 100%; 
+img {
+    width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-/* Aplicando CSS al encabezado */
-header.encabezado{
-    text-align: center;
-    padding: 1rem;
-    background-color: #f8f8f8;
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-figure.logo{
+/* Aplicando CSS al encabezado */
+header.encabezado {
+    text-align: center;
+    padding: 1rem;
+}
+
+figure.logo {
     width: 50%;
     max-width: 150px;
     margin: 0 auto 1rem auto;
 }
 
-nav.navegacion{
+nav.navegacion {
     width: 100%;
 }
 
-ul.opciones{
+ul.opciones {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-ul.opciones li{
+ul.opciones li {
     width: 100%;
 }
 
-ul.opciones li a{
+ul.opciones li a {
     display: block;
-    color: black;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     padding: 0.75rem 1rem;
     transition: all 0.3s ease;
 }
 
-ul.opciones li a:hover{
+ul.opciones li a:hover {
     color: white;
     background-color: orangered;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px white,
+        0px 0px 20px white,
+        0px 0px 30px white;
+}
+.titulo{
+    font-size: 4rem;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+section.productos article.producto {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    color: white;
+    border: 2px orangered solid;
+    transition: all ease .5s;
+}
+
+.boton:hover {
+    color: white;
+    background-color: orangered;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px white,
+        0px 0px 20px white,
+        0px 0px 30px white;
 }
 
 /* Aplicando CSS Responsive */
 /* Media Queries */
 
 /* Tablet */
-@media(min-width: 768px){
-    header.encabezado{
+@media(min-width: 768px) {
+
+    header.encabezado {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
     }
-    
-    figure.logo{
+
+    figure.logo {
         width: 15%;
         max-width: 120px;
         margin: 0;
     }
-    
-    nav.navegacion{
+
+    nav.navegacion {
         display: flex;
         width: 75%;
         justify-content: flex-end;
     }
-    
-    ul.opciones{
+
+    ul.opciones {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
@@ -94,50 +132,126 @@ ul.opciones li a:hover{
         gap: 0.5rem;
         width: 100%;
     }
-    
-    ul.opciones li{
+
+    ul.opciones li {
         width: auto;
     }
-    
-    ul.opciones li a{
+
+    ul.opciones li a {
         font-size: 1rem;
         padding: 0.5rem 1rem;
     }
+
+    section.productos {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    section.productos article.producto {
+        width: 50%;
+        padding: 15px 10px;
+    }
+
+    /* Estilos CSS - Productos novedosos */
+    article.novedosoUno,
+    article.novedosoDos {
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+    }
+
+    article.novedosoUno figure,
+    article.novedosoDos figure {
+        width: 50%;
+    }
+
+    article.novedosoUno p,
+    article.novedosoDos p {
+        width: 50%;
+        font-size: 2rem;
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Aplicando CSS al pié de página */
+    footer.piePagina {
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0px;
+    }
+
+    footer.piePagina a {
+        padding: 10px;
+        border: 2px solid orangered;
+    }
+
+    footer.piePagina a:hover {
+        color: white;
+        background-color: orangered;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px white,
+            0px 0px 20px white,
+            0px 0px 30px white;
+    }
+
+    footer.piePagina a {
+        color: white;
+        font-size: 1.2rem;
+    }
+
 }
 
 /* Desktop */
-@media(min-width: 992px){
-    header.encabezado{
+@media(min-width: 992px) {
+    body {
+        background-image: url('../img/publcidad.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    main.contenedor {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    header.encabezado {
         padding: 1.5rem 3rem;
     }
-    
-    figure.logo{
+
+    figure.logo {
         width: 10%;
         max-width: 150px;
     }
-    
-    nav.navegacion{
+
+    nav.navegacion {
         width: 80%;
     }
-    
-    ul.opciones{
+
+    ul.opciones {
         gap: 1rem;
     }
-    
-    ul.opciones li a{
+
+    ul.opciones li a {
         font-size: 1.2rem;
         padding: 0.75rem 1.5rem;
     }
 }
 
 /* Pantallas extra grandes */
-@media(min-width: 1200px){
-    header.encabezado{
+@media(min-width: 1200px) {
+    header.encabezado {
         padding: 1.5rem 4rem;
     }
-    
-    ul.opciones li a{
+
+    ul.opciones li a {
         font-size: 1.3rem;
         padding: 0.75rem 2rem;
+    }
+
+    section.productos article.producto {
+        width: 25%;
     }
 }
