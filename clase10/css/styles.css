@@ -1,0 +1,22 @@
+/* Selector universal - Globales */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+.fondoMoto{
+    background-image: url('../img/moto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.fondoCarro{
+    background-image: url('../img/carro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
