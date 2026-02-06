@@ -9,7 +9,6 @@ let usuarios = [];
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
     let nombre = document.getElementById('nombre');
-    // nombre.focus();
     console.log(nombre.value);
     usuarios.push({
         nombre: nombre.value

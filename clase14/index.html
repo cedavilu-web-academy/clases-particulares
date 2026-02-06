@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.18/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-black text-white">
+    <h1 class="text-center text-white bg-black relleno p-3">Bienvenid@s a nuestro sitio web</h1>
+    <a class="btn btn-outline-warning m-auto d-block w-25 p-2" href="https://cedavilu.com" target="_blank">CEDAVILU</a>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/honda-transalp.jpg" class="d-block w-100" alt="Honda">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/kawasaky 600.jpg" class="d-block w-100" alt="Kawasaky">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/suzuki-1200.jpg" class="d-block w-100" alt="Suzuki">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <h2 class="text-center mt-4 mb-4">Registro de estudiantes</h2>
+    <section class="registro w-25 m-auto mb-5">
+        <!-- Pedir al usuario: Nombre - Apellido - Email - Clave -->
+        <form id="formulario">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Clave secreta</label>
+                <input type="password" class="form-control"  name="password" id="password">
+            </div>
+            <button id="botonEnviar" type="submit" class="btn btn-outline-warning">Enviar</button>
+            <button id="botonListar" type="submit" class="btn btn-outline-danger">Listar</button>
+        </form>
+    </section>
+    <h2 class="text-center mt-3 mb-3 display-5">Listado de usuarios</h2>
+    <section class="listadoUsuarios p-5 rounded-4">
+        <table class="table rounded-4">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">APELLIDO</th>
+                    <th scope="col">CORREO</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+                
+            </tbody>
+        </table>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.18/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
