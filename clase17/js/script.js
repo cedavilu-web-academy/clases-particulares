@@ -32,3 +32,27 @@ botonListar.addEventListener('click', function(){
     body.classList.add('fondoPagina');
     obtenerPersonajes();
 })
+
+// -----------------------------------------------------------------------------
+// Código para poder seleccionar los personajes
+async function selectorPersonaje(){
+    // Capturar el elemento del DOM
+    let selectorPersonaje = document.getElementById('selectorPersonaje');
+    try {
+        const uri = 'https://rickandmortyapi.com/api/character#';
+        const resultado = await fetch(uri);
+        const datos = await resultado.json(); 
+        // console.log(datos.results);
+        let personajes = datos.results;
+        // selectorPersonaje.innerHTML = '';
+        for (const personaje of personajes) {
+            selectorPersonaje.innerHTML+= `
+                <option value="${personaje.name}">${personaje.name}</option>
+            `
+        }    
+    } catch (error) {
+        console.log('Ufff ha ocurrido un error: ' , error.message);
+    }
+}
+// Invocar a la función
+selectorPersonaje();
